@@ -1,0 +1,12 @@
+image : mcr.microsoft.com/dotnet/core/sdk:3.1
+stages:
+  - build
+build:
+ stage: build
+ script:
+  - cd src
+  - dotnet restore
+  - dotnet build --no-restore -c release
+  - dotnet test --no-restore -c release
+ only:
+   - release
