@@ -7,11 +7,12 @@
 namespace Furysoft.TagList
 {
     using System;
+    using System.Collections.Generic;
 
     /// <summary>
     /// The Tag List.
     /// </summary>
-    public sealed class TagList
+    public sealed class TagList : List<string>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TagList" /> class.
