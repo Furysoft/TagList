@@ -9,4 +9,4 @@ build:
   - dotnet build --no-restore -c release
   - dotnet test --no-restore -c release
  only:
-   - release
+   - master
