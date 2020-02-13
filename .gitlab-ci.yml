@@ -15,5 +15,7 @@ nugetpush:
    - dotnet restore
    - dotnet build --no-restore -c release
    - dotnet test --no-restore -c release
+   - dotnet pack --no-restore -c release /p:Version=${CI_COMMIT_TAG#v}
+   - dotnet nuget push **/*.nupkg -k $NugetApi -s "https://api.nuget.org/v3/index.json"
   only:
    - tags
